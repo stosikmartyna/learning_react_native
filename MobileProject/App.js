@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, FlatList, Button } from 'react-native';
+import { Header } from './components/Header';
 import { GoalInput } from './components/GoalInput';
 import { GoalItem } from './components/GoalItem';
 
@@ -31,6 +32,7 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
+      <Header  title="Hello world!"/>
       <Button title="Add new goal" onPress={handleIsAddMode}/>
       <GoalInput onAddGoalHandler={addGoalHandler} visible={isAddMode} onCancel={cancelGoalAdditionHandler}/>
       <FlatList 
